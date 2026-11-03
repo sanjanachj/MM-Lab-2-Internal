@@ -1,0 +1,194 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #172554, #312e81, #581c87);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.screen {
+    padding: 25px 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 45px;
+    color: #fde047;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 12px 0;
+    font-size: 17px;
+}
+
+.instructions {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 25px 0;
+}
+
+button {
+    background: #facc15;
+    color: #1e1b4b;
+    border: none;
+    padding: 14px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #fef08a;
+    transform: scale(1.05);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#game-area {
+    height: 400px;
+    background-image: url("assets/garden-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+#basket {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 55px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
+    z-index: 2;
+}
+
+/* Start Screen Design */
+
+#start-screen {
+    background: rgba(255, 255, 255, 0.90);
+    color: #14532d;
+    border: 4px solid #facc15;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+#start-screen h1 {
+    color: #15803d;
+    text-shadow: 2px 2px #fde68a;
+}
+
+#start-screen h2 {
+    color: #a16207;
+}
+
+#start-screen p {
+    font-weight: bold;
+}
+
+#start-screen .instructions {
+    background: #dcfce7;
+    border: 2px dashed #16a34a;
+    color: #166534;
+    border-radius: 15px;
+}
+
+#start-btn {
+    background: linear-gradient(135deg, #facc15, #fb923c);
+    color: #422006;
+    border: 3px solid white;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Over Screen Design */
+
+#game-over-screen {
+    background: rgba(255, 255, 255, 0.92);
+    color: #166534;
+    border: 4px solid #f97316;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+#game-over-screen h1 {
+    color: #dc2626;
+    text-shadow: 2px 2px #fed7aa;
+}
+
+#game-over-screen h2 {
+    color: #166534;
+    font-size: 28px;
+}
+
+#restart-btn {
+    background: linear-gradient(135deg, #4ade80, #16a34a);
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Information Design */
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #65a30d;
+    border-radius: 15px;
+    color: #166534;
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#pause-btn {
+    background: linear-gradient(135deg, #facc15, #fb923c);
+    color: #422006;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+}

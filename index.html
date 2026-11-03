@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Catcher - Arcade Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+
+        <div id="start-screen" class="screen">
+            <h1>🍎 Fruit Catcher</h1>
+            <h2>Arcade Challenge</h2>
+
+            <p>Catch fruits and avoid bombs!</p>
+
+            <div class="instructions">
+                <p>🌟 Catch Golden Star to earn 30 points!</p>
+                <p>🍎 Catch fruits to earn points</p>
+                <p>💣 Avoid bombs to save your lives</p>
+                <p>⬅️ ➡️ Use arrow keys to move</p>
+            </div>
+
+            <button id="start-btn">START GAME</button>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <h2>Fruit Catcher</h2>
+            <div class="game-info">
+                <button id="pause-btn">PAUSE</button>
+                <span>Score: <span id="score">0</span></span>
+                <span>Lives: <span id="lives">3</span></span>
+                <span>Time: <span id="timer">60</span>s</span>
+            </div>
+
+            <div id="game-area">
+                <div id="basket">🧺</div>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="screen hidden">
+            <h1>Game Over!</h1>
+            <h2>Your Score: <span id="final-score">0</span></h2>
+            <button id="restart-btn">PLAY AGAIN</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <audio id="background-music" src="sound/background.mp3" loop></audio>
+</body>
+</html>
