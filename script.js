@@ -114,6 +114,38 @@ document.addEventListener("keydown", function(event) {
     basket.style.left = basketPosition + "px";
     basket.style.transform = "none";
 });
+// Mobile Touch Control - Drag anywhere to move basket
+
+let touchStartX = 0;
+
+document.addEventListener("pointerdown", function(event) {
+
+    if (!gameRunning || isPaused) return;
+
+    touchStartX = event.clientX;
+
+});
+
+document.addEventListener("pointermove", function(event) {
+
+    if (!gameRunning || isPaused) return;
+
+    if (event.buttons !== 1 && event.pointerType === "mouse") return;
+
+    const maxPosition = gameArea.clientWidth - basket.offsetWidth;
+
+    basketPosition = event.clientX - gameArea.getBoundingClientRect().left
+                     - basket.offsetWidth / 2;
+
+    basketPosition = Math.max(
+        0,
+        Math.min(basketPosition, maxPosition)
+    );
+
+    basket.style.left = basketPosition + "px";
+    basket.style.transform = "none";
+
+});
 
 // Falling Fruits
 
